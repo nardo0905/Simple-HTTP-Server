@@ -10,7 +10,7 @@ public class Main {
         final ServerSocket server = new ServerSocket(8080);
         System.out.println("Listening for connection on port 8080...");
         while (true) {
-            try (final Socket client = server.accept();) {
+            try (final Socket client = server.accept()) {
                 // Reading request
                 InputStreamReader isr = new InputStreamReader(client.getInputStream());
                 BufferedReader reader = new BufferedReader(isr);
