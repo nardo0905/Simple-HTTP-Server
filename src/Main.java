@@ -21,7 +21,7 @@ public class Main {
                 }
                 // Sending response
                 Date today = new Date();
-                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today;
+                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + "Date:" + today;
                 client.getOutputStream().write(httpResponse.getBytes("UTF-8"));
             }
         }
